@@ -1,19 +1,19 @@
 <template>
-    <div id="Header">
-        SJC
-    </div>
+  <div id="Header">
+      <header class="container">
+          Santi
+      </header>
+  </div>
 </template>
 <script>
 export default {
-  name: "Header"
+  name: "Header",
 };
 </script>
 <style scoped>
-#Header{
-    background-color:#FCFDFF;
-    max-height: 200px;
-    width: 100%;
-
-
+#Header {
+  background-color: #fcfdff;
+  width: 100%;
+  overflow-x: hidden;
 }
 </style>

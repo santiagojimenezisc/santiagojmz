@@ -1,12 +1,21 @@
 <template>
   <div id="aplicacion">
+        <Header></Header>
+     <Footer></Footer>
   <router-view />
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
 export default {
-  name:"aplicacion"
+  name:"aplicacion",
+    components: {
+    Header,
+    Footer,
+  },
 }
 </script>
 <style>
@@ -14,8 +23,10 @@ export default {
   font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background: #FCFDFF;
+  
+  overflow-x: hidden;
+
 }
 
 </style>
