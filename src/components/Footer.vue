@@ -1,31 +1,32 @@
-<template>
-  <div id="footer">
-    <footer class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="logo-footer">
-            <h2>Santi</h2>
-            <h4>Desarrollador Frontend</h4>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 text-center footer-nav">
-          <a href="">Sobre mí</a>
-          <a href="">Portafolio</a>
-          <a href="">Contacto</a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 text-center footer-redes">
-          <a href=""><font-awesome-icon :icon="['fab', 'twitter']" /></a>
-          <a href=""><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-          <a href=""><font-awesome-icon :icon="['fab', 'dribbble']" /></a>
+<template >
+  <footer id="Footer">
+    <div class="container">
+    <section class="footer-content">
+      <div class="">
+        <div class="logo-footer">
+          <h2>Santi</h2>
+          <h4>Desarrollador Frontend</h4>
         </div>
       </div>
-      <div class="row">
-        <div class="made-by">
-          <h6>Hecha con pasión by Santi.</h6>
-        </div>
+      <div class="footer-nav">
+        <a href="">Inicio</a>
+        <a href="">Sobre mí</a>
+        <a href="">Portafolio</a>
+        <a href="">Contacto</a>
+        
       </div>
-    </footer>
-  </div>
+      <div class="footer-redes">
+        <a href=""><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+        <a href=""><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
+        <a href=""><font-awesome-icon :icon="['fab', 'dribbble']" /></a>
+      </div>
+    </section>
+    <section class="footer-made-by">
+      <h6>Hecha con ❤ por Santi.</h6>
+    </section>
+    </div>
+
+  </footer>
 </template>
 <script>
 export default {
@@ -33,13 +34,24 @@ export default {
 };
 </script>
 <style scoped>
-.made-by{
-    display: flex;
-    justify-content: center;
-    margin: 75px 0px 0px 0px;
+#Footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #0085ff;
+  color: #fff;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  padding: 25px 0px 25px 0px;
 }
-.col-sm-12 {
-  margin: 5px 0px;
+.logo-footer {
+ display: flex;
+ flex-direction: column;
 }
 .footer-redes {
   display: flex;
@@ -47,32 +59,26 @@ export default {
   align-items: flex-start;
   gap: 25px;
 }
+.footer-made-by {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 0px 0px;
+}
 .footer-redes a {
   font-size: 24px !important;
 }
 .footer-nav {
   display: flex;
+  flex-direction: row;
+  gap:10px;
   justify-content: space-between;
-  align-items: flex-start;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  width: 100%;
-  overflow-y: hidden;
-  background-color: #0085ff;
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 75px 0px 25px 0px;
-}
-.logo-footer {
-  text-align: left;
-}
 a {
   color: #fff;
   text-decoration: none;
@@ -82,22 +88,43 @@ a:hover {
   color: #00386b;
   transition: 0.4s;
 }
-@media only screen and (max-width: 768px) {
-
-  .footer-nav {
+@media only screen and (max-width: 767px) {
+  .footer-content{
     flex-direction: column;
-    align-items: flex-end;
+    gap:25px 25px;
+  }
+  .footer-nav {
+    order:3;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-footer{
+    order: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
-.footer-redes {
-  justify-content: start;
-
+  .footer-redes {
+    order:2;
+    justify-content: start;
+  }
+}
+@media (max-width: 1024px ) and (min-width: 768px)  {
+  .footer-content{
+    flex-direction: row;
+  }
+  .logo-footer{
+    flex-direction:column;
+    justify-content: start;
+  }
+  .footer-nav {
 }
 }
 
 h2 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
 }
 h4 {
   font-size: 16px;

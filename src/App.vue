@@ -1,6 +1,6 @@
 <template>
-  <div id="aplicacion">
-        <Header></Header>
+  <div id="aplicacion" class="container">
+     <Header></Header>
      <Footer></Footer>
   <router-view />
   </div>
@@ -24,9 +24,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #FCFDFF;
-  
   overflow-x: hidden;
-
 }
-
 </style>
